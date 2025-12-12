@@ -21,8 +21,8 @@ except ImportError:
 from custom_ci import custom_input, custom_print
 
 # Global variables
-app_url_primary_cdn = "https://web.archive.org/web/20141111030303if_/http://www.whatsapp.com/android/current/WhatsApp.apk"
-app_url_alternate_cdn = "https://legacy-static-assets.androidapksfree.com/earth/androidbucket/WhatsApp-v2.11.431-AndroidBucket.com.apk"
+app_url_primary_cdn = "https://raw.githubusercontent.com/Skorpion96/WhatsApp-Key-Database-Extractor/refs/heads/master/helpers/LegacyWhatsApp.apk"
+app_url_alternate_cdn = "https://raw.githubusercontent.com/AbinashBishoyi/WhatsApp-Key-DB-Extractor-UnOfficial/refs/heads/master/LegacyWhatsApp.apk"
 
 
 def after_connect(adb):

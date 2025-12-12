@@ -8,6 +8,10 @@ try:
     from termcolor import colored, cprint
 except ImportError:
     try:
+        os.system("pip3 install termcolor --break-system-packages")
+    except Exception:
+        os.system("python3 -m pip install termcolor --break-system-packages")
+    except Exception:
         os.system("pip3 install termcolor")
     except Exception:
         os.system("python3 -m pip install termcolor")

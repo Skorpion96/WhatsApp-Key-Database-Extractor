@@ -10,8 +10,12 @@ try:
     from tqdm import tqdm
 except ImportError:
     try:
-        os.system("pip3 install packaging requests tqdm")
+        os.system("pip3 install packaging requests tqdm --break-system-packages")
     except Exception:
+        os.system("python3 -m pip install packaging requests tqdm --break-system-packages")
+    except Exception:
+        os.system("pip3 install packaging requests tqdm")
+     except Exception:
         os.system("python3 -m pip install packaging requests tqdm")
 
 from custom_ci import custom_input, custom_print

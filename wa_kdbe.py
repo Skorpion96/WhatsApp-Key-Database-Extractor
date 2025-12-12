@@ -12,13 +12,19 @@ try:
 except ImportError:
     print("\nFirst run: Auto installing python requirements.\n")
     try:
-        # Trying both methods of installations
+        # Trying both methods of installations + Ubuntu way
+        os.system("pip3 install --upgrade packaging psutil termcolor requests tqdm --break-system-packages")
+    except Exception:
+        os.system(
+            "python3 -m pip install --upgrade packaging psutil termcolor requests tqdm --break-system-packages"
+        )
+    except Exception:
         os.system("pip3 install --upgrade packaging psutil termcolor requests tqdm")
     except Exception:
         os.system(
             "python3 -m pip install --upgrade packaging psutil termcolor requests tqdm"
         )
-
+    
 
 import argparse
 import concurrent.futures
